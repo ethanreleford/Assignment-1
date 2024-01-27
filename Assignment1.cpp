@@ -72,7 +72,7 @@ void countPrimesInRange(int start, int end)
     sumOfPrimes += localSum;
 
     //merge top ten primes into the global top ten primes
-    for (int i = 0; i < topTenSize; ++i)
+    for (int i = topTenSize - 1; i >= 0; --i)
     {
         if (localTopTenPrimes[i] == 0)
         {
@@ -127,7 +127,7 @@ int main()
                    << primeCount << " " << sumOfPrimes << std::endl;
 
         //write top ten primes to file
-        for (int i = 0; i < topTenSize; ++i)
+        for (int i = topTenSize - 1; i >= 0; --i)
         {
             if (topTenPrimes[i] != 0)
             {
